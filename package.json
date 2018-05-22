@@ -7,7 +7,7 @@
   "module": "build/module/index.js",
   "repository": "https://github.com/emmanuelgautier/linkedin-import",
   "license": "MIT",
-  "keywords": [],
+  "keywords": ["linkedin", "import", "knohime"],
   "scripts": {
     "info": "npm-scripts-info",
     "build": "run-s clean && run-p build:*",
