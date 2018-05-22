@@ -1,13 +1,13 @@
 {
-  "name": "linkedin-import",
-  "version": "1.0.0",
+  "name": "@knohime/linkedin-import",
+  "version": "0.1.0",
   "description": "Linkedin™ archive export module",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/emmanuelgautier/linkedin-import",
+  "repository": "https://github.com/knohime/linkedin-import",
   "license": "MIT",
-  "keywords": [],
+  "keywords": ["linkedin", "import", "knohime"],
   "scripts": {
     "info": "npm-scripts-info",
     "build": "run-s clean && run-p build:*",
