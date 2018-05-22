@@ -2,22 +2,22 @@ import { loadAsync } from 'jszip';
 import { fromPairs, unzip, zip } from 'lodash';
 
 export interface ExportFiles {
-  causesYouCareAbout: string;
-  certifications: string;
-  educations: string;
-  emails: string;
-  languages: string;
-  organizations: string;
-  positions: string;
-  profile: string;
-  projects: string;
-  skills: string;
-  testScores: string;
+  causesYouCareAbout?: string;
+  certifications?: string;
+  educations?: string;
+  emails?: string;
+  languages?: string;
+  organizations?: string;
+  positions?: string;
+  profile?: string;
+  projects?: string;
+  skills?: string;
+  testScores?: string;
 }
 
 const filesName: Array<[string, string]> = [
   ['Causes You Care About.csv', 'causesYouCareAbout'],
-  ['Certifications.csv', 'cerfifications'],
+  ['Certifications.csv', 'certifications'],
   ['Education.csv', 'educations'],
   ['Email Addresses.csv', 'emails'],
   ['Languages.csv', 'languages'],
@@ -39,7 +39,7 @@ const filesName: Array<[string, string]> = [
 export async function unzipFile(
   data: Buffer,
   filter: string[] = []
-): Promise<Partial<ExportFiles>> {
+): Promise<ExportFiles> {
   const { files } = await loadAsync(data);
   const existingFilesName = Object.keys(files);
 
