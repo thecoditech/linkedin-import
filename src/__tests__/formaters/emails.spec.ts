@@ -1,6 +1,6 @@
 import { test } from 'ava';
 
-import { Email, emailsFormater } from '../../formaters/emails';
+import { emailsFormater } from '../../formaters/emails';
 
 test('Should return right array of formated object', t => {
   const data: any[] = [

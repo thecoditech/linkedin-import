@@ -1,43 +1,18 @@
 import {
   causesYouCareAboutFormater,
-  CauseYouCareAbout,
-  Certification,
   certificationsFormater,
-  Education,
   educationsFormater,
-  Email,
   emailsFormater,
-  Language,
   languagesFormater,
-  Organization,
   organizationsFormater,
-  Position,
   positionsFormater,
-  Profile,
   profileFormater,
-  Project,
   projectsFormater,
-  Skill,
   skillsFormater,
-  TestScore,
   testScoresFormater
 } from './formaters';
 import { parseCSV } from './parser';
 import { unzipFile } from './unzip';
-
-export interface LinkedinImport {
-  causesYouCareAbout?: CauseYouCareAbout[];
-  certifications?: Certification[];
-  educations?: Education[];
-  emails?: Email[];
-  languages?: Language[];
-  organizations?: Organization[];
-  positions?: Position[];
-  profile?: Profile;
-  projects?: Project[];
-  skills?: Skill[];
-  testScores?: TestScore[];
-}
 
 const filesFormaters: { [index: string]: any } = {
   causesYouCareAbout: causesYouCareAboutFormater,

@@ -1,15 +1,6 @@
 import * as moment from 'moment';
 
-export interface Position {
-  companyName: string;
-  title: string;
-  description: string;
-  location: string;
-  startedOn: Date;
-  finishedOn: Date | null;
-}
-
-export function positionsFormater(data: any[]): Position[] {
+export function positionsFormater(data: any[]): GeoPosition[] {
   return data.map(position => ({
     companyName: position['Company Name'],
     description: position.Description,

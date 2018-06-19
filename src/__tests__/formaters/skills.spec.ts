@@ -1,6 +1,6 @@
 import { test } from 'ava';
 
-import { Skill, skillsFormater } from '../../formaters/skills';
+import { skillsFormater } from '../../formaters/skills';
 
 test('Should return right array of formated object', t => {
   const data: any[] = [

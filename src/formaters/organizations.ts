@@ -1,13 +1,5 @@
 import * as moment from 'moment';
 
-export interface Organization {
-  name: string;
-  description: string;
-  position: string;
-  startDate: Date;
-  endDate: Date | null;
-}
-
 export function organizationsFormater(data: any[]): Organization[] {
   return data.map(organisation => ({
     description: organisation.Description,

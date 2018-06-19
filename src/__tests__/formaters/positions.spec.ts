@@ -1,6 +1,6 @@
 import { test } from 'ava';
 
-import { Position, positionsFormater } from '../../formaters/positions';
+import { positionsFormater } from '../../formaters/positions';
 
 test('Should return right array of formated object', t => {
   const data: any[] = [
@@ -21,7 +21,7 @@ test('Should return right array of formated object', t => {
       Title: 'Devops'
     }
   ];
-  const expectedObject: Position[] = [
+  const expectedObject: GeoPosition[] = [
     {
       companyName: 'Self-Employed',
       description: '',
@@ -45,7 +45,7 @@ test('Should return right array of formated object', t => {
 
 test('Should return empty array when data array is empty', t => {
   const data: any[] = [];
-  const expectedObject: Position[] = [];
+  const expectedObject: GeoPosition[] = [];
 
   t.deepEqual(positionsFormater(data), expectedObject);
 });

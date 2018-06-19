@@ -1,14 +1,5 @@
 import * as moment from 'moment';
 
-export interface Education {
-  schoolName: string;
-  startDate: Date;
-  endDate: Date | null;
-  notes: string | null;
-  degreeName: string;
-  activities: string | null;
-}
-
 export function educationsFormater(data: any[]): Education[] {
   return data.map(education => ({
     activities: education.Activities || null,

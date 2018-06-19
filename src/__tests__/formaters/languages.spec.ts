@@ -1,6 +1,6 @@
 import { test } from 'ava';
 
-import { Language, languagesFormater } from '../../formaters/languages';
+import { languagesFormater } from '../../formaters/languages';
 
 test('Should return right array of formated object', t => {
   const data: any[] = [

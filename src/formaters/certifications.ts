@@ -1,14 +1,5 @@
 import * as moment from 'moment';
 
-export interface Certification {
-  name: string;
-  url: string;
-  authority: string;
-  startDate: Date;
-  endDate: Date | null;
-  licenseNumber: string | null;
-}
-
 export function certificationsFormater(data: any[]): Certification[] {
   return data.map(certification => ({
     authority: certification.Authority,

@@ -1,13 +1,5 @@
 import * as moment from 'moment';
 
-export interface Project {
-  title: string;
-  description: string;
-  url: string | null;
-  startDate: Date;
-  endDate: Date | null;
-}
-
 export function projectsFormater(data: any[]): Project[] {
   return data.map(project => ({
     description: project.Description,

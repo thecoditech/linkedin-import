@@ -11,7 +11,7 @@ before(
   () =>
     new Promise((resolve, reject) => {
       readFile(
-        resolvePath(__dirname, '../../../../test/ref/LinkedinDataExport.zip'),
+        resolvePath(__dirname, '../../../test/ref/LinkedinDataExport.zip'),
         (err: Error, dataBuffer: Buffer) => {
           if (err) {
             return reject(err);
