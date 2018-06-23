@@ -1,6 +1,9 @@
 import { test } from 'ava';
 
-import { causesYouCareAboutFormater } from '../../formaters/causesYouCareAbout';
+import {
+  causesYouCareAboutFormater,
+  CauseYouCareAbout
+} from '../../formaters/causesYouCareAbout';
 
 test('Should return right array of formated object', t => {
   const data: any[] = [

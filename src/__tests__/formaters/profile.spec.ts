@@ -1,6 +1,6 @@
 import { test } from 'ava';
 
-import { profileFormater } from '../../formaters/profile';
+import { Profile, profileFormater } from '../../formaters/profile';
 
 test('Should return formated object', t => {
   const data: any[] = [

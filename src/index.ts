@@ -1,14 +1,25 @@
 import {
   causesYouCareAboutFormater,
+  CauseYouCareAbout,
+  Certification,
   certificationsFormater,
+  Education,
   educationsFormater,
+  Email,
   emailsFormater,
+  GeoPosition,
+  Language,
   languagesFormater,
+  Organization,
   organizationsFormater,
   positionsFormater,
+  Profile,
   profileFormater,
+  Project,
   projectsFormater,
+  Skill,
   skillsFormater,
+  TestScore,
   testScoresFormater
 } from './formaters';
 import { parseCSV } from './parser';
@@ -28,7 +39,21 @@ const filesFormaters: { [index: string]: any } = {
   testScores: testScoresFormater
 };
 
-export async function linkedinImport(
+export interface LinkedinImport {
+  causesYouCareAbout?: CauseYouCareAbout[];
+  certifications?: Certification[];
+  educations?: Education[];
+  emails?: Email[];
+  languages?: Language[];
+  organizations?: Organization[];
+  positions?: GeoPosition[];
+  profile?: Profile;
+  projects?: Project[];
+  skills?: Skill[];
+  testScores?: TestScore[];
+}
+
+export default async function linkedinImport(
   data: Buffer,
   filter: string[] = []
 ): Promise<LinkedinImport> {

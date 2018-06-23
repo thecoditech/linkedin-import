@@ -1,6 +1,6 @@
 import { test } from 'ava';
 
-import { positionsFormater } from '../../formaters/positions';
+import { GeoPosition, positionsFormater } from '../../formaters/positions';
 
 test('Should return right array of formated object', t => {
   const data: any[] = [

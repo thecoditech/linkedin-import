@@ -1,6 +1,6 @@
 import { test } from 'ava';
 
-import { projectsFormater } from '../../formaters/projects';
+import { Project, projectsFormater } from '../../formaters/projects';
 
 test('Should return right array of formated object', t => {
   const data: any[] = [

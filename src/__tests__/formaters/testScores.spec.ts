@@ -1,6 +1,6 @@
 import { test } from 'ava';
 
-import { testScoresFormater } from '../../formaters/testScores';
+import { TestScore, testScoresFormater } from '../../formaters/testScores';
 
 test('Should return right array of formated object', t => {
   const data: any[] = [

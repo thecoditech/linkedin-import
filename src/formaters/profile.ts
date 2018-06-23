@@ -1,5 +1,33 @@
 import * as moment from 'moment';
 
+export interface Website {
+  type: string;
+  url: string;
+}
+
+export interface InstantMessenger {
+  type: string;
+  username: string;
+}
+
+export interface Profile {
+  firstName: string;
+  lastName: string;
+  maidenName: string | null;
+  address: string | null;
+  birthDate: Date;
+  contactInstructions: string | null;
+  headline: string;
+  summary: string;
+  industry: string;
+  country: string | null;
+  zipCode: string | null;
+  geoLocation: string | null;
+  twitterHandles: string | null;
+  websites: Website[];
+  instantMessengers: InstantMessenger[];
+}
+
 function formatType(type: string): string {
   return type.trimLeft().toLowerCase();
 }
