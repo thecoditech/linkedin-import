@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.1"></a>
+## [0.2.1](https://github.com/knohime/linkedin-import/compare/v0.2.0...v0.2.1) (2018-06-24)
+
+
+### Bug Fixes
+
+* **typing:** export formaters types ([5ff3f87](https://github.com/knohime/linkedin-import/commit/5ff3f87))
+* **typing:** move interface declarations ([871cf4a](https://github.com/knohime/linkedin-import/commit/871cf4a))
+
+
+
 <a name="0.2.0"></a>
 # 0.2.0 (2018-05-22)
 
