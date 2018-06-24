@@ -3,7 +3,7 @@ import { readFile } from 'fs';
 import { resolve as resolvePath } from 'path';
 import { spy } from 'sinon';
 
-import linkedinImport from '../index';
+import { linkedinImport } from '../import';
 import * as unzip from '../unzip';
 
 let data: Buffer;
