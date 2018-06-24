@@ -68,7 +68,26 @@
 				<p><a href="https://travis-ci.org/knohime/linkedin-import"><img src="https://travis-ci.org/knohime/linkedin-import.svg?branch=master" alt="Build Status"></a>
 					<a href="https://ci.appveyor.com/project/emmanuelgautier/linkedin-import/branch/master"><img src="https://ci.appveyor.com/api/projects/status/p4p5regivrmva75o/branch/master?svg=true" alt="Build status"></a>
 				<a href="https://codecov.io/gh/knohime/linkedin-import"><img src="https://codecov.io/gh/knohime/linkedin-import/branch/master/graph/badge.svg" alt="codecov"></a></p>
-				<p>Linkedin™ archive export module</p>
+				<blockquote>
+					<p>Linkedin™ archive export module</p>
+				</blockquote>
+				<h2 id="install">Install</h2>
+				<pre><code>$ <span class="hljs-built_in">npm</span> install @knohime/linkedin-<span class="hljs-keyword">import</span>
+</code></pre><h2 id="usage">Usage</h2>
+				<pre><code class="lang-js"><span class="hljs-keyword">import</span> linkedinImport <span class="hljs-keyword">from</span> <span class="hljs-string">'@knohime/linkedin-import'</span>;
+
+<span class="hljs-keyword">const</span> exportedObject = <span class="hljs-keyword">await</span> linkedinImport(data);
+
+<span class="hljs-comment">// use data imported</span>
+<span class="hljs-keyword">const</span> name = <span class="hljs-string">`<span class="hljs-subst">${exportedObject.profile.firstname}</span> <span class="hljs-subst">${exportedObject.profile.lastname}</span>`</span>
+</code></pre>
+				<p><a href="https://knohime.github.io/linkedin-import/">API</a></p>
+				<h2 id="maintainers">Maintainers</h2>
+				<ul>
+					<li><a href="https://github.com/emmanuelgautier">Emmanuel Gautier</a></li>
+				</ul>
+				<h2 id="license">License</h2>
+				<p>MIT</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -97,6 +116,9 @@
 						<a href="interfaces/exportfiles.html" class="tsd-kind-icon">Export<wbr>Files</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/geoposition.html" class="tsd-kind-icon">Geo<wbr>Position</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/instantmessenger.html" class="tsd-kind-icon">Instant<wbr>Messenger</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -107,9 +129,6 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/organization.html" class="tsd-kind-icon">Organization</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/position.html" class="tsd-kind-icon">Position</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/profile.html" class="tsd-kind-icon">Profile</a>
