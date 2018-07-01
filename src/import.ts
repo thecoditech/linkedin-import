@@ -7,11 +7,11 @@ import {
   educationsFormater,
   Email,
   emailsFormater,
-  GeoPosition,
   Language,
   languagesFormater,
   Organization,
   organizationsFormater,
+  Position,
   positionsFormater,
   Profile,
   profileFormater,
@@ -46,7 +46,7 @@ export interface LinkedinImport {
   emails?: Email[];
   languages?: Language[];
   organizations?: Organization[];
-  positions?: GeoPosition[];
+  positions?: Position[];
   profile?: Profile;
   projects?: Project[];
   skills?: Skill[];
