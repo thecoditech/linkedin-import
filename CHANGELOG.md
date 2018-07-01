@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.2"></a>
+## [0.2.2](https://github.com/knohime/linkedin-import/compare/v0.2.1...v0.2.2) (2018-07-01)
+
+
+### Bug Fixes
+
+* **typing:** move geoposition typing name to position ([15839c8](https://github.com/knohime/linkedin-import/commit/15839c8))
+
+
+
 <a name="0.2.1"></a>
 ## [0.2.1](https://github.com/knohime/linkedin-import/compare/v0.2.0...v0.2.1) (2018-06-24)
 
