@@ -1,5 +1,3 @@
-import * as moment from 'moment';
-
 export interface TestScore {
   testDate: Date;
   description: string;
@@ -12,6 +10,6 @@ export function testScoresFormater(data: any[]): TestScore[] {
     description: testScore.Description,
     name: testScore.Name,
     score: testScore.Score,
-    testDate: moment.utc(testScore['Test Date'], 'MMM YYYY').toDate()
+    testDate: new Date(`${testScore['Test Date']} GMT`)
   }));
 }

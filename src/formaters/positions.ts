@@ -1,5 +1,3 @@
-import * as moment from 'moment';
-
 export interface Position {
   companyName: string;
   title: string;
@@ -15,9 +13,9 @@ export function positionsFormater(data: any[]): Position[] {
     description: position.Description,
     finishedOn:
       (position['Finished On'] || null) &&
-      moment.utc(position['Finished On'], 'MMM YYYY').toDate(),
+      new Date(`${position['Finished On']} GMT`),
     location: position.Location,
-    startedOn: moment.utc(position['Started On'], 'MMM YYYY').toDate(),
+    startedOn: new Date(`${position['Started On']} GMT`),
     title: position.Title
   }));
 }

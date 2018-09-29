@@ -1,5 +1,3 @@
-import * as moment from 'moment';
-
 export interface Organization {
   name: string;
   description: string;
@@ -13,9 +11,9 @@ export function organizationsFormater(data: any[]): Organization[] {
     description: organisation.Description,
     endDate:
       (organisation['End Date'] || null) &&
-      moment.utc(organisation['End Date'], 'MMM YYYY').toDate(),
+      new Date(`${organisation['End Date']} GMT`),
     name: organisation.Name,
     position: organisation.Position,
-    startDate: moment.utc(organisation['Start Date'], 'MMM YYYY').toDate()
+    startDate: new Date(`${organisation['Start Date']} GMT`)
   }));
 }

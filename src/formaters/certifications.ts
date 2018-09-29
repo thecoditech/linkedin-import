@@ -1,5 +1,3 @@
-import * as moment from 'moment';
-
 export interface Certification {
   name: string;
   url: string;
@@ -14,10 +12,10 @@ export function certificationsFormater(data: any[]): Certification[] {
     authority: certification.Authority,
     endDate:
       (certification['End Date'] || null) &&
-      moment.utc(certification['End Date'], 'MMM YYYY').toDate(),
+      new Date(`${certification['End Date']} GMT`),
     licenseNumber: certification['License Number'] || null,
     name: certification.Name,
-    startDate: moment.utc(certification['Start Date'], 'MMM YYYY').toDate(),
+    startDate: new Date(`${certification['Start Date']} GMT`),
     url: certification.Url
   }));
 }
