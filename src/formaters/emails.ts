@@ -1,5 +1,3 @@
-import * as moment from 'moment';
-
 export interface Email {
   emailAddress: string;
   confirmed: boolean;
@@ -12,6 +10,6 @@ export function emailsFormater(data: any[]): Email[] {
     confirmed: email.Confirmed === 'Yes',
     emailAddress: email['Email Address'],
     primary: email.Primary === 'Yes',
-    updatedOn: moment.utc(email['Updated On'], 'M/D/YY, h:m a').toDate()
+    updatedOn: new Date(`${email['Updated On']} GMT`)
   }));
 }

@@ -1,5 +1,3 @@
-import * as moment from 'moment';
-
 export interface Education {
   schoolName: string;
   startDate: Date;
@@ -15,9 +13,9 @@ export function educationsFormater(data: any[]): Education[] {
     degreeName: education['Degree Name'],
     endDate:
       (education['End Date'] || null) &&
-      moment.utc(education['End Date'], 'YYYY').toDate(),
+      new Date(`${education['End Date']} GMT`),
     notes: education.Notes || null,
     schoolName: education['School Name'],
-    startDate: moment.utc(education['Start Date'], 'YYYY').toDate()
+    startDate: new Date(`${education['Start Date']} GMT`)
   }));
 }

@@ -1,5 +1,3 @@
-import * as moment from 'moment';
-
 export interface Website {
   type: string;
   url: string;
@@ -37,7 +35,7 @@ export function profileFormater(data: any[]): Profile {
 
   return {
     address: profile.Address || null,
-    birthDate: moment.utc(profile['Birth Date'], 'MMM D, YYYY').toDate(),
+    birthDate: new Date(`${profile['Birth Date']} GMT`),
     contactInstructions: profile['Contact Instructions'] || null,
     country: profile.Country || null,
     firstName: profile['First Name'],
