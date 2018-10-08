@@ -1,5 +1,7 @@
 import { loadAsync } from 'jszip';
-import { fromPairs, unzip, zip } from 'lodash';
+import fromPairs from 'lodash.frompairs';
+import unzip from 'lodash.unzip';
+import zip from 'lodash.zip';
 
 export interface ExportFiles {
   causesYouCareAbout?: string;
