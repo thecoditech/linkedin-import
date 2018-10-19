@@ -1,4 +1,4 @@
-import { before, test } from 'ava';
+import test from 'ava';
 import { readFile } from 'fs';
 import { resolve as resolvePath } from 'path';
 import { spy } from 'sinon';
@@ -7,7 +7,7 @@ import { linkedinImport } from '../import';
 import * as unzip from '../unzip';
 
 let data: Buffer;
-before(
+test.before(
   () =>
     new Promise((resolve, reject) => {
       readFile(

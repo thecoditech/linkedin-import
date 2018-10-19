@@ -1,4 +1,4 @@
-# Snapshot report for `build/main/lib/__tests__/unzip.spec.js`
+# Snapshot report for `build/main/__tests__/unzip.spec.js`
 
 The actual snapshot is saved in `unzip.spec.js.snap`.
 

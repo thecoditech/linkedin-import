@@ -1,11 +1,11 @@
-import { before, test } from 'ava';
+import test from 'ava';
 import { readFile } from 'fs';
 import { resolve as resolvePath } from 'path';
 
 import { unzipFile } from '../unzip';
 
 let data: Buffer;
-before(
+test.before(
   () =>
     new Promise((resolve, reject) => {
       readFile(

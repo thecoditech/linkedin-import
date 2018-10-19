@@ -1,10 +1,10 @@
-import { beforeEach, test } from 'ava';
+import test from 'ava';
 import { SinonSpy, spy } from 'sinon';
 
 import { parseCSV } from '../parser';
 
 let formater: SinonSpy;
-beforeEach(() => {
+test.beforeEach(() => {
   formater = spy();
 });
 
