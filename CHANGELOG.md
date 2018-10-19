@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.3"></a>
+## [0.2.3](https://github.com/knohime/linkedin-import/compare/v0.2.2...v0.2.3) (2018-10-19)
+
+
+### Performance Improvements
+
+* **date:** replace moment with native date ([1aefbbe](https://github.com/knohime/linkedin-import/commit/1aefbbe))
+* replace lodash package with per method packages ([9d7d506](https://github.com/knohime/linkedin-import/commit/9d7d506))
+
+
+
 <a name="0.2.2"></a>
 ## [0.2.2](https://github.com/knohime/linkedin-import/compare/v0.2.1...v0.2.2) (2018-07-01)
 
