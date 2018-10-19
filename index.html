@@ -72,15 +72,13 @@
 					<p>Linkedin™ archive export module</p>
 				</blockquote>
 				<h2 id="install">Install</h2>
-				<pre><code>$ <span class="hljs-built_in">npm</span> install @knohime/linkedin-<span class="hljs-keyword">import</span>
-</code></pre><h2 id="usage">Usage</h2>
-				<pre><code class="lang-js"><span class="hljs-keyword">import</span> linkedinImport <span class="hljs-keyword">from</span> <span class="hljs-string">'@knohime/linkedin-import'</span>;
+				<pre><code>$ <span class="hljs-built_in">npm</span> install @knohime/linkedin-<span class="hljs-keyword">import</span></code></pre><h2 id="usage">Usage</h2>
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> linkedinImport <span class="hljs-keyword">from</span> <span class="hljs-string">'@knohime/linkedin-import'</span>;
 
 <span class="hljs-keyword">const</span> exportedObject = <span class="hljs-keyword">await</span> linkedinImport(data);
 
 <span class="hljs-comment">// use data imported</span>
-<span class="hljs-keyword">const</span> name = <span class="hljs-string">`<span class="hljs-subst">${exportedObject.profile.firstname}</span> <span class="hljs-subst">${exportedObject.profile.lastname}</span>`</span>
-</code></pre>
+<span class="hljs-keyword">const</span> name = <span class="hljs-string">`<span class="hljs-subst">${exportedObject.profile.firstname}</span> <span class="hljs-subst">${exportedObject.profile.lastname}</span>`</span></code></pre>
 				<p><a href="https://knohime.github.io/linkedin-import/">API</a></p>
 				<h2 id="maintainers">Maintainers</h2>
 				<ul>
