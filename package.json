@@ -70,7 +70,7 @@
     "@types/papaparse": "^4.5.7",
     "@types/sinon": "^4.3.1",
     "ava": "^1.2.1",
-    "codecov": "^3.0.0",
+    "codecov": "^3.6.0",
     "cz-conventional-changelog": "^2.1.0",
     "gh-pages": "^1.0.0",
     "npm-run-all": "^4.1.2",

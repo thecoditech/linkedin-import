@@ -10,7 +10,7 @@ test.before(
     new Promise((resolve, reject) => {
       readFile(
         resolvePath(__dirname, '../../../../test/ref/LinkedinDataExport.zip'),
-        (err: Error, dataBuffer: Buffer) => {
+        (err: NodeJS.ErrnoException | null, dataBuffer: Buffer) => {
           if (err) {
             return reject(err);
           }
