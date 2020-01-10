@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { Email, emailsFormater } from '../../formaters/emails';
+import { Email, emailsMapper } from '../../mappers/emails';
 
 test('Should return right array of formated object', t => {
   const data: any[] = [
@@ -32,12 +32,12 @@ test('Should return right array of formated object', t => {
     }
   ];
 
-  t.deepEqual(emailsFormater(data), expectedObject);
+  t.deepEqual(emailsMapper(data), expectedObject);
 });
 
 test('Should return empty array when data array is empty', t => {
   const data: any[] = [];
   const expectedObject: Email[] = [];
 
-  t.deepEqual(emailsFormater(data), expectedObject);
+  t.deepEqual(emailsMapper(data), expectedObject);
 });

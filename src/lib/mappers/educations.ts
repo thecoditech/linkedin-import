@@ -7,7 +7,7 @@ export interface Education {
   activities: string | null;
 }
 
-export function educationsFormater(data: any[]): Education[] {
+export function educationsMapper(data: any[]): Education[] {
   return data.map(education => ({
     activities: education.Activities || null,
     degreeName: education['Degree Name'],

@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { Position, positionsFormater } from '../../formaters/positions';
+import { Position, positionsMapper } from '../../mappers/positions';
 
 test('Should return right array of formated object', t => {
   const data: any[] = [
@@ -40,12 +40,12 @@ test('Should return right array of formated object', t => {
     }
   ];
 
-  t.deepEqual(positionsFormater(data), expectedObject);
+  t.deepEqual(positionsMapper(data), expectedObject);
 });
 
 test('Should return empty array when data array is empty', t => {
   const data: any[] = [];
   const expectedObject: Position[] = [];
 
-  t.deepEqual(positionsFormater(data), expectedObject);
+  t.deepEqual(positionsMapper(data), expectedObject);
 });

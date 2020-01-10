@@ -1,9 +1,9 @@
 import test from 'ava';
 
 import {
-  causesYouCareAboutFormater,
+  causesYouCareAboutMapper,
   CauseYouCareAbout
-} from '../../formaters/causesYouCareAbout';
+} from '../../mappers/causesYouCareAbout';
 
 test('Should return right array of formated object', t => {
   const data: any[] = [
@@ -15,12 +15,12 @@ test('Should return right array of formated object', t => {
     { supportedCause: 'cause 2' }
   ];
 
-  t.deepEqual(causesYouCareAboutFormater(data), expectedObject);
+  t.deepEqual(causesYouCareAboutMapper(data), expectedObject);
 });
 
 test('Should return empty array when data array is empty', t => {
   const data: any[] = [];
   const expectedObject: CauseYouCareAbout[] = [];
 
-  t.deepEqual(causesYouCareAboutFormater(data), expectedObject);
+  t.deepEqual(causesYouCareAboutMapper(data), expectedObject);
 });

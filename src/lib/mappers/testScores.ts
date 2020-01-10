@@ -5,7 +5,7 @@ export interface TestScore {
   score: string;
 }
 
-export function testScoresFormater(data: any[]): TestScore[] {
+export function testScoresMapper(data: any[]): TestScore[] {
   return data.map(testScore => ({
     description: testScore.Description,
     name: testScore.Name,

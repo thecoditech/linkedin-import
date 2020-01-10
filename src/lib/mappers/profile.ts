@@ -30,7 +30,7 @@ function formatType(type: string): string {
   return type.trimLeft().toLowerCase();
 }
 
-export function profileFormater(data: any[]): Profile {
+export function profileMapper(data: any[]): Profile {
   const profile = data[0];
 
   return {

@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { Language, languagesFormater } from '../../formaters/languages';
+import { Language, languagesMapper } from '../../mappers/languages';
 
 test('Should return right array of formated object', t => {
   const data: any[] = [
@@ -24,12 +24,12 @@ test('Should return right array of formated object', t => {
     }
   ];
 
-  t.deepEqual(languagesFormater(data), expectedObject);
+  t.deepEqual(languagesMapper(data), expectedObject);
 });
 
 test('Should return empty array when data array is empty', t => {
   const data: any[] = [];
   const expectedObject: Language[] = [];
 
-  t.deepEqual(languagesFormater(data), expectedObject);
+  t.deepEqual(languagesMapper(data), expectedObject);
 });

@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { Profile, profileFormater } from '../../formaters/profile';
+import { Profile, profileMapper } from '../../mappers/profile';
 
 test('Should return formated object', t => {
   const data: any[] = [
@@ -45,7 +45,7 @@ test('Should return formated object', t => {
     zipCode: '75000'
   };
 
-  t.deepEqual(profileFormater(data), expectedObject);
+  t.deepEqual(profileMapper(data), expectedObject);
 });
 
 test('Should return formated object when some informating is missing', t => {
@@ -86,5 +86,5 @@ test('Should return formated object when some informating is missing', t => {
     zipCode: null
   };
 
-  t.deepEqual(profileFormater(data), expectedObject);
+  t.deepEqual(profileMapper(data), expectedObject);
 });

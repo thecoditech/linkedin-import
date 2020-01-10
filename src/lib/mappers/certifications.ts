@@ -7,7 +7,7 @@ export interface Certification {
   licenseNumber: string | null;
 }
 
-export function certificationsFormater(data: any[]): Certification[] {
+export function certificationsMapper(data: any[]): Certification[] {
   return data.map(certification => ({
     authority: certification.Authority,
     endDate:

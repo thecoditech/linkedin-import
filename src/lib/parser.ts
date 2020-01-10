@@ -6,11 +6,11 @@ const parserConfig: ParseConfig = {
   skipEmptyLines: true
 };
 
-export function parseCSV<T>(csvString: string, formater: (data: any) => T): T {
+export function parseCSV<T>(csvString: string, mapper: (data: any) => T): T {
   const { errors, data } = parse(csvString, parserConfig);
   if (errors.length > 0) {
     throw new Error(errors[0].message);
   }
 
-  return formater(data);
+  return mapper(data);
 }

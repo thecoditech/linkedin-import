@@ -7,7 +7,7 @@ export interface Position {
   finishedOn: Date | null;
 }
 
-export function positionsFormater(data: any[]): Position[] {
+export function positionsMapper(data: any[]): Position[] {
   return data.map(position => ({
     companyName: position['Company Name'],
     description: position.Description,

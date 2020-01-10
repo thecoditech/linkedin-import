@@ -2,8 +2,8 @@ import test from 'ava';
 
 import {
   Certification,
-  certificationsFormater
-} from '../../formaters/certifications';
+  certificationsMapper
+} from '../../mappers/certifications';
 
 test('Should return right array of formated object', t => {
   const data: any[] = [
@@ -43,12 +43,12 @@ test('Should return right array of formated object', t => {
     }
   ];
 
-  t.deepEqual(certificationsFormater(data), expectedObject);
+  t.deepEqual(certificationsMapper(data), expectedObject);
 });
 
 test('Should return empty array when data array is empty', t => {
   const data: any[] = [];
   const expectedObject: Certification[] = [];
 
-  t.deepEqual(certificationsFormater(data), expectedObject);
+  t.deepEqual(certificationsMapper(data), expectedObject);
 });

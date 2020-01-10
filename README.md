@@ -26,8 +26,10 @@ const name = `${exportedObject.profile.firstname} ${exportedObject.profile.lastn
 
 ## Maintainers
 
-- [Emmanuel Gautier](https://github.com/emmanuelgautier)
+[![Emmanuel Gautier](https://avatars0.githubusercontent.com/u/2765366?s=144)](https://www.emmanuelgautier.fr) |
+--- |
+[Emmanuel Gautier](https://www.emmanuelgautier.fr) |
 
 ## License
 
-MIT
+MIT © [Knohime](https://www.knohime.com)

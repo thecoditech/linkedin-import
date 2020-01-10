@@ -3,7 +3,7 @@ export interface Language {
   proficiency: string;
 }
 
-export function languagesFormater(data: any[]): Language[] {
+export function languagesMapper(data: any[]): Language[] {
   return data.map(language => ({
     name: language.Name,
     proficiency: language.Proficiency

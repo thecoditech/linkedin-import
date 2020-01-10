@@ -6,7 +6,7 @@ export interface Project {
   endDate: Date | null;
 }
 
-export function projectsFormater(data: any[]): Project[] {
+export function projectsMapper(data: any[]): Project[] {
   return data.map(project => ({
     description: project.Description,
     endDate:

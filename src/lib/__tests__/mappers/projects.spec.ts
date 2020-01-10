@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { Project, projectsFormater } from '../../formaters/projects';
+import { Project, projectsMapper } from '../../mappers/projects';
 
 test('Should return right array of formated object', t => {
   const data: any[] = [
@@ -36,12 +36,12 @@ test('Should return right array of formated object', t => {
     }
   ];
 
-  t.deepEqual(projectsFormater(data), expectedObject);
+  t.deepEqual(projectsMapper(data), expectedObject);
 });
 
 test('Should return empty array when data array is empty', t => {
   const data: any[] = [];
   const expectedObject: Project[] = [];
 
-  t.deepEqual(projectsFormater(data), expectedObject);
+  t.deepEqual(projectsMapper(data), expectedObject);
 });

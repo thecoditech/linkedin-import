@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { Skill, skillsFormater } from '../../formaters/skills';
+import { Skill, skillsMapper } from '../../mappers/skills';
 
 test('Should return right array of formated object', t => {
   const data: any[] = [
@@ -20,12 +20,12 @@ test('Should return right array of formated object', t => {
     }
   ];
 
-  t.deepEqual(skillsFormater(data), expectedObject);
+  t.deepEqual(skillsMapper(data), expectedObject);
 });
 
 test('Should return empty array when data array is empty', t => {
   const data: any[] = [];
   const expectedObject: Skill[] = [];
 
-  t.deepEqual(skillsFormater(data), expectedObject);
+  t.deepEqual(skillsMapper(data), expectedObject);
 });

@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { TestScore, testScoresFormater } from '../../formaters/testScores';
+import { TestScore, testScoresMapper } from '../../mappers/testScores';
 
 test('Should return right array of formated object', t => {
   const data: any[] = [
@@ -32,12 +32,12 @@ test('Should return right array of formated object', t => {
     }
   ];
 
-  t.deepEqual(testScoresFormater(data), expectedObject);
+  t.deepEqual(testScoresMapper(data), expectedObject);
 });
 
 test('Should return empty array when data array is empty', t => {
   const data: any[] = [];
   const expectedObject: TestScore[] = [];
 
-  t.deepEqual(testScoresFormater(data), expectedObject);
+  t.deepEqual(testScoresMapper(data), expectedObject);
 });

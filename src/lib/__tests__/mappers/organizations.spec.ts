@@ -1,9 +1,6 @@
 import test from 'ava';
 
-import {
-  Organization,
-  organizationsFormater
-} from '../../formaters/organizations';
+import { Organization, organizationsMapper } from '../../mappers/organizations';
 
 test('Should return right array of formated object', t => {
   const data: any[] = [
@@ -39,12 +36,12 @@ test('Should return right array of formated object', t => {
     }
   ];
 
-  t.deepEqual(organizationsFormater(data), expectedObject);
+  t.deepEqual(organizationsMapper(data), expectedObject);
 });
 
 test('Should return empty array when data array is empty', t => {
   const data: any[] = [];
   const expectedObject: Organization[] = [];
 
-  t.deepEqual(organizationsFormater(data), expectedObject);
+  t.deepEqual(organizationsMapper(data), expectedObject);
 });
