@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.7](https://github.com/knohime/linkedin-import/compare/v0.2.6...v0.2.7) (2020-06-14)
+
+
+### Bug Fixes
+
+* export interfaces ([3d6760d](https://github.com/knohime/linkedin-import/commit/3d6760d35678729f7de877460b6e46f8c3affec0))
+
 ### [0.2.6](https://github.com/knohime/linkedin-import/compare/v0.2.5...v0.2.6) (2020-01-12)
 
 <a name="0.2.5"></a>
