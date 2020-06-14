@@ -6,10 +6,10 @@ export interface Email {
 }
 
 export function emailsMapper(data: any[]): Email[] {
-  return data.map(email => ({
+  return data.map((email) => ({
     confirmed: email.Confirmed === 'Yes',
     emailAddress: email['Email Address'],
     primary: email.Primary === 'Yes',
-    updatedOn: new Date(`${email['Updated On']} GMT`)
+    updatedOn: new Date(`${email['Updated On']} GMT`),
   }));
 }

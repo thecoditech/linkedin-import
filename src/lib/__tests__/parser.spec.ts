@@ -8,7 +8,7 @@ test.beforeEach(() => {
   formater = spy();
 });
 
-test('Should call formater once', t => {
+test('Should call formater once', (t) => {
   const csvString = 'header\ntext';
 
   parseCSV(csvString, formater);
@@ -16,7 +16,7 @@ test('Should call formater once', t => {
   t.true(formater.calledOnce);
 });
 
-test('Should throw error when csvString is invalid', t => {
+test('Should throw error when csvString is invalid', (t) => {
   const csvString = 'header,header\ntext';
 
   const error: Error = t.throws(() => parseCSV(csvString, formater));

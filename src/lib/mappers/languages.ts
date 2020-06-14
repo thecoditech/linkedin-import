@@ -4,8 +4,8 @@ export interface Language {
 }
 
 export function languagesMapper(data: any[]): Language[] {
-  return data.map(language => ({
+  return data.map((language) => ({
     name: language.Name,
-    proficiency: language.Proficiency
+    proficiency: language.Proficiency,
   }));
 }

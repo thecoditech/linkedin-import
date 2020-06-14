@@ -17,7 +17,7 @@ export interface ExportFiles {
   testScores?: string;
 }
 
-const filesName: Array<[string, string]> = [
+const filesName: [string, string][] = [
   ['Causes You Care About.csv', 'causesYouCareAbout'],
   ['Certifications.csv', 'certifications'],
   ['Education.csv', 'educations'],
@@ -28,7 +28,7 @@ const filesName: Array<[string, string]> = [
   ['Profile.csv', 'profile'],
   ['Projects.csv', 'projects'],
   ['Skills.csv', 'skills'],
-  ['Test Scores.csv', 'testScores']
+  ['Test Scores.csv', 'testScores'],
 ];
 
 /**
@@ -53,7 +53,7 @@ export async function unzipFile(
     )
   );
 
-  const filesToLoad = filesNameToLoad.map(fileName =>
+  const filesToLoad = filesNameToLoad.map((fileName) =>
     files[fileName].async('text')
   );
   const filesContent = await Promise.all(filesToLoad);

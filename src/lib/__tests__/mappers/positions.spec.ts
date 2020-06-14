@@ -2,7 +2,7 @@ import test from 'ava';
 
 import { Position, positionsMapper } from '../../mappers/positions';
 
-test('Should return right array of formated object', t => {
+test('Should return right array of formated object', (t) => {
   const data: any[] = [
     {
       'Company Name': 'Self-Employed',
@@ -10,7 +10,7 @@ test('Should return right array of formated object', t => {
       'Finished On': '',
       Location: 'Paris Area, France',
       'Started On': 'Jan 2018',
-      Title: 'FullStack Developer Freelance'
+      Title: 'FullStack Developer Freelance',
     },
     {
       'Company Name': 'Google',
@@ -18,8 +18,8 @@ test('Should return right array of formated object', t => {
       'Finished On': 'Oct 2012',
       Location: 'Dublin Area, Ireland',
       'Started On': 'Feb 2007',
-      Title: 'Devops'
-    }
+      Title: 'Devops',
+    },
   ];
   const expectedObject: Position[] = [
     {
@@ -28,7 +28,7 @@ test('Should return right array of formated object', t => {
       finishedOn: null,
       location: 'Paris Area, France',
       startedOn: new Date('2018-01'),
-      title: 'FullStack Developer Freelance'
+      title: 'FullStack Developer Freelance',
     },
     {
       companyName: 'Google',
@@ -36,14 +36,14 @@ test('Should return right array of formated object', t => {
       finishedOn: new Date('2012-10'),
       location: 'Dublin Area, Ireland',
       startedOn: new Date('2007-02'),
-      title: 'Devops'
-    }
+      title: 'Devops',
+    },
   ];
 
   t.deepEqual(positionsMapper(data), expectedObject);
 });
 
-test('Should return empty array when data array is empty', t => {
+test('Should return empty array when data array is empty', (t) => {
   const data: any[] = [];
   const expectedObject: Position[] = [];
 

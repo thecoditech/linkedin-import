@@ -23,13 +23,13 @@ test.before(
     })
 );
 
-test('Return the right list of files', async t => {
+test('Return the right list of files', async (t) => {
   const exportFiles = await unzipFile(data);
 
   t.snapshot(exportFiles);
 });
 
-test('Return the right list of files when filter argument is passed', async t => {
+test('Return the right list of files when filter argument is passed', async (t) => {
   const exportFiles = await unzipFile(data, ['educations', 'organizations']);
 
   t.snapshot(exportFiles);

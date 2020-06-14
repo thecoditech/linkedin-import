@@ -8,7 +8,7 @@ export interface Position {
 }
 
 export function positionsMapper(data: any[]): Position[] {
-  return data.map(position => ({
+  return data.map((position) => ({
     companyName: position['Company Name'],
     description: position.Description,
     finishedOn:
@@ -16,6 +16,6 @@ export function positionsMapper(data: any[]): Position[] {
       new Date(`${position['Finished On']} GMT`),
     location: position.Location,
     startedOn: new Date(`${position['Started On']} GMT`),
-    title: position.Title
+    title: position.Title,
   }));
 }

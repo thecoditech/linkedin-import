@@ -48,7 +48,7 @@ export function profileMapper(data: any[]): Profile {
       .filter((im: string[]) => im.length > 1)
       .map(([type, ...rest]: [string, string[]]) => ({
         type: formatType(type),
-        username: rest.join(':')
+        username: rest.join(':'),
       })),
     lastName: profile['Last Name'],
     maidenName: profile['Maiden Name'] || null,
@@ -59,8 +59,8 @@ export function profileMapper(data: any[]): Profile {
       .filter((website: string[]) => website.length > 1)
       .map(([type, ...rest]: [string, string[]]) => ({
         type: formatType(type),
-        url: rest.join(':')
+        url: rest.join(':'),
       })),
-    zipCode: profile['Zip Code'] || null
+    zipCode: profile['Zip Code'] || null,
   };
 }

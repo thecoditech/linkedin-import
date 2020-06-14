@@ -3,5 +3,5 @@ export interface Skill {
 }
 
 export function skillsMapper(data: any[]): Skill[] {
-  return data.map(skill => ({ name: skill.Name }));
+  return data.map((skill) => ({ name: skill.Name }));
 }

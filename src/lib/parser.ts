@@ -3,7 +3,7 @@ import { parse, ParseConfig } from 'papaparse';
 const parserConfig: ParseConfig = {
   delimiter: ',',
   header: true,
-  skipEmptyLines: true
+  skipEmptyLines: true,
 };
 
 export function parseCSV<T>(csvString: string, mapper: (data: any) => T): T {

@@ -8,7 +8,7 @@ export interface Certification {
 }
 
 export function certificationsMapper(data: any[]): Certification[] {
-  return data.map(certification => ({
+  return data.map((certification) => ({
     authority: certification.Authority,
     endDate:
       (certification['End Date'] || null) &&
@@ -16,6 +16,6 @@ export function certificationsMapper(data: any[]): Certification[] {
     licenseNumber: certification['License Number'] || null,
     name: certification.Name,
     startDate: new Date(`${certification['Start Date']} GMT`),
-    url: certification.Url
+    url: certification.Url,
   }));
 }

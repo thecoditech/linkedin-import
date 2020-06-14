@@ -2,28 +2,28 @@ import test from 'ava';
 
 import { Skill, skillsMapper } from '../../mappers/skills';
 
-test('Should return right array of formated object', t => {
+test('Should return right array of formated object', (t) => {
   const data: any[] = [
     {
-      Name: 'Javascript'
+      Name: 'Javascript',
     },
     {
-      Name: 'Typescript'
-    }
+      Name: 'Typescript',
+    },
   ];
   const expectedObject: Skill[] = [
     {
-      name: 'Javascript'
+      name: 'Javascript',
     },
     {
-      name: 'Typescript'
-    }
+      name: 'Typescript',
+    },
   ];
 
   t.deepEqual(skillsMapper(data), expectedObject);
 });
 
-test('Should return empty array when data array is empty', t => {
+test('Should return empty array when data array is empty', (t) => {
   const data: any[] = [];
   const expectedObject: Skill[] = [];
 

@@ -1,6 +1,6 @@
 import {
   causesYouCareAboutMapper,
-  CauseYouCareAbout
+  CauseYouCareAbout,
 } from './mappers/causesYouCareAbout';
 import { Certification, certificationsMapper } from './mappers/certifications';
 import { Education, educationsMapper } from './mappers/educations';
@@ -26,7 +26,7 @@ const filesMappers: { [index: string]: any } = {
   profile: profileMapper,
   projects: projectsMapper,
   skills: skillsMapper,
-  testScores: testScoresMapper
+  testScores: testScoresMapper,
 };
 
 export interface LinkedinImport {
@@ -58,7 +58,7 @@ export async function linkedinImport(
   return Object.entries(files).reduce(
     (acc, [file, value]) => ({
       [file]: parseCSV(value, filesMappers[file]),
-      ...acc
+      ...acc,
     }),
     {}
   );

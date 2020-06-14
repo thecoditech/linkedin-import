@@ -8,7 +8,7 @@ export interface Education {
 }
 
 export function educationsMapper(data: any[]): Education[] {
-  return data.map(education => ({
+  return data.map((education) => ({
     activities: education.Activities || null,
     degreeName: education['Degree Name'],
     endDate:
@@ -16,6 +16,6 @@ export function educationsMapper(data: any[]): Education[] {
       new Date(`${education['End Date']} GMT`),
     notes: education.Notes || null,
     schoolName: education['School Name'],
-    startDate: new Date(`${education['Start Date']} GMT`)
+    startDate: new Date(`${education['Start Date']} GMT`),
   }));
 }

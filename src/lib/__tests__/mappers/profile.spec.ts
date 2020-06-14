@@ -2,7 +2,7 @@ import test from 'ava';
 
 import { Profile, profileMapper } from '../../mappers/profile';
 
-test('Should return formated object', t => {
+test('Should return formated object', (t) => {
   const data: any[] = [
     {
       Address: 'Street 1st',
@@ -20,8 +20,8 @@ test('Should return formated object', t => {
       'Twitter Handles': 'knohime',
       Websites:
         'PERSONAL:https://www.knohime.com, BLOG:https://blog.knohime.com, RSS:https://blog.knohime.com/atom.xml',
-      'Zip Code': '75000'
-    }
+      'Zip Code': '75000',
+    },
   ];
   const expectedObject: Profile = {
     address: 'Street 1st',
@@ -40,15 +40,15 @@ test('Should return formated object', t => {
     websites: [
       { type: 'personal', url: 'https://www.knohime.com' },
       { type: 'blog', url: 'https://blog.knohime.com' },
-      { type: 'rss', url: 'https://blog.knohime.com/atom.xml' }
+      { type: 'rss', url: 'https://blog.knohime.com/atom.xml' },
     ],
-    zipCode: '75000'
+    zipCode: '75000',
   };
 
   t.deepEqual(profileMapper(data), expectedObject);
 });
 
-test('Should return formated object when some informating is missing', t => {
+test('Should return formated object when some informating is missing', (t) => {
   const data: any[] = [
     {
       Address: '',
@@ -65,8 +65,8 @@ test('Should return formated object when some informating is missing', t => {
       Summary: 'FOSS lover. Open Source is Great',
       'Twitter Handles': '',
       Websites: '',
-      'Zip Code': ''
-    }
+      'Zip Code': '',
+    },
   ];
   const expectedObject: Profile = {
     address: null,
@@ -83,7 +83,7 @@ test('Should return formated object when some informating is missing', t => {
     summary: 'FOSS lover. Open Source is Great',
     twitterHandles: null,
     websites: [],
-    zipCode: null
+    zipCode: null,
   };
 
   t.deepEqual(profileMapper(data), expectedObject);

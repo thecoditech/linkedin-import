@@ -3,7 +3,7 @@ export interface CauseYouCareAbout {
 }
 
 export function causesYouCareAboutMapper(data: any[]): CauseYouCareAbout[] {
-  return data.map(cause => ({
-    supportedCause: cause['Supported Cause']
+  return data.map((cause) => ({
+    supportedCause: cause['Supported Cause'],
   }));
 }

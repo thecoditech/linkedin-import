@@ -25,20 +25,20 @@ test.before(
     })
 );
 
-test('Should import with filters', async t => {
+test('Should import with filters', async (t) => {
   const filters = ['educations', 'organizations'];
   const linkedinImportObject = await linkedinImport(data, filters);
 
   t.snapshot(linkedinImportObject);
 });
 
-test('Should import without filters', async t => {
+test('Should import without filters', async (t) => {
   const linkedinImportObject = await linkedinImport(data);
 
   t.snapshot(linkedinImportObject);
 });
 
-test('Should call unzipFile once', async t => {
+test('Should call unzipFile once', async (t) => {
   const unzipFile = spy(unzip, 'unzipFile');
 
   const filters = ['educations', 'organizations'];

@@ -2,7 +2,7 @@ import test from 'ava';
 
 import { Education, educationsMapper } from '../../mappers/educations';
 
-test('Should return right array of formated object', t => {
+test('Should return right array of formated object', (t) => {
   const data: any[] = [
     {
       Activities: 'Awesome activities',
@@ -11,7 +11,7 @@ test('Should return right array of formated object', t => {
       'End Date': '2007',
       Notes: 'Massachusetts Institute of Technology',
       'School Name': 'MIT',
-      'Start Date': '2002'
+      'Start Date': '2002',
     },
     {
       Activities: '',
@@ -19,8 +19,8 @@ test('Should return right array of formated object', t => {
       'End Date': '',
       Notes: '',
       'School Name': 'Developer Life',
-      'Start Date': '2007'
-    }
+      'Start Date': '2007',
+    },
   ];
   const expectedObject: Education[] = [
     {
@@ -30,7 +30,7 @@ test('Should return right array of formated object', t => {
       endDate: new Date('2007-01'),
       notes: 'Massachusetts Institute of Technology',
       schoolName: 'MIT',
-      startDate: new Date('2002-01')
+      startDate: new Date('2002-01'),
     },
     {
       activities: null,
@@ -38,14 +38,14 @@ test('Should return right array of formated object', t => {
       endDate: null,
       notes: null,
       schoolName: 'Developer Life',
-      startDate: new Date('2007-01')
-    }
+      startDate: new Date('2007-01'),
+    },
   ];
 
   t.deepEqual(educationsMapper(data), expectedObject);
 });
 
-test('Should return empty array when data array is empty', t => {
+test('Should return empty array when data array is empty', (t) => {
   const data: any[] = [];
   const expectedObject: Education[] = [];
 
