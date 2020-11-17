@@ -65,7 +65,7 @@
     "@types/lodash.frompairs": "4.0.6",
     "@types/lodash.unzip": "3.4.6",
     "@types/lodash.zip": "4.2.6",
-    "@types/papaparse": "5.2.3",
+    "@types/papaparse": "5.2.4",
     "@types/sinon": "9.0.8",
     "ava": "3.13.0",
     "codecov": "3.8.0",
