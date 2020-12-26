@@ -62,7 +62,7 @@
     "papaparse": "^5.3.0"
   },
   "devDependencies": {
-    "@emmanuelgautier/renovate-config": "1.1.1",
+    "@emmanuelgautier/renovate-config": "1.1.2",
     "@types/lodash.frompairs": "4.0.6",
     "@types/lodash.unzip": "3.4.6",
     "@types/lodash.zip": "4.2.6",
