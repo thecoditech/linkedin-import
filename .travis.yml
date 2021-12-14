@@ -1,8 +1,9 @@
 sudo: false
 language: node_js
 node_js:
-  - lts/dubnium
   - lts/erbium
+  - lts/fermium
+  - lts/gallium
   - node
 cache:
   directories:
