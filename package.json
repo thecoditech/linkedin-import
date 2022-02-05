@@ -67,7 +67,7 @@
     "@types/lodash.unzip": "3.4.6",
     "@types/lodash.zip": "4.2.6",
     "@types/papaparse": "5.3.2",
-    "@types/sinon": "10.0.9",
+    "@types/sinon": "10.0.10",
     "ava": "3.15.0",
     "codecov": "3.8.3",
     "cz-conventional-changelog": "3.3.0",
