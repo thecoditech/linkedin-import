@@ -19,6 +19,6 @@ test('Should call formater once', (t) => {
 test('Should throw error when csvString is invalid', (t) => {
   const csvString = 'header,header\ntext';
 
-  const error: Error = t.throws(() => parseCSV(csvString, formater));
-  t.is(error.message, 'Too few fields: expected 2 fields but parsed 1');
+  const error = t.throws(() => parseCSV(csvString, formater));
+  t.is(error?.message, 'Too few fields: expected 2 fields but parsed 1');
 });
