@@ -77,7 +77,7 @@
     "nyc": "15.1.0",
     "open-cli": "7.1.0",
     "prettier": "2.7.1",
-    "sinon": "14.0.1",
+    "sinon": "14.0.2",
     "standard-version": "9.5.0",
     "trash-cli": "5.0.0",
     "tslint": "6.1.3",
