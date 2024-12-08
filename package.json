@@ -76,7 +76,7 @@
     "npm-scripts-info": "0.3.9",
     "nyc": "15.1.0",
     "open-cli": "7.1.0",
-    "prettier": "2.7.1",
+    "prettier": "3.4.2",
     "sinon": "15.0.0",
     "standard-version": "9.5.0",
     "trash-cli": "5.0.0",
